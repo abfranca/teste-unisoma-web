@@ -26,7 +26,7 @@ public class CalculoNovoSalarioService {
         object.put("CPF", funcionario.getCpf());
         object.put("Novo salario", Utils.valorFormatado(novoSalario));
         object.put("Reajuste ganho", Utils.valorFormatado(reajuste));
-        object.put("Em percentual", Utils.valorFormatado(percentual));
+        object.put("Em percentual", Utils.valorFormatado(percentual * 100).split("\\.")[0] + " %");
         return object;
     }
 
