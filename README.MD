@@ -1,6 +1,6 @@
 ## Descrição
 
-Os requisitos funcionais e não funcionais da aplicação podem ser encontrados no arquivo [TesteUniSomaWeb.pdf]()
+Os requisitos funcionais e não funcionais da aplicação podem ser encontrados no arquivo [TesteUniSomaWeb.pdf](https://github.com/abfranca/teste-unisoma-web/blob/main/TesteUniSomaWeb.pdf)
 
 ## Pré-requisitos
 
