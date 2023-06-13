@@ -98,3 +98,11 @@ ddd.ddd.ddd-dd
     "Imposto": "R$ 2066.04"
 }
 ```
+
+## Testes de unidade
+
+Pelo terminal, execute o seguinte comando na raiz do projeto.
+
+```bash
+$ mvn test
+```
