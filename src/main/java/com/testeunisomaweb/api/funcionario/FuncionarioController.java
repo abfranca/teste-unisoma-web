@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/funcionarios")
 public class FuncionarioController {
@@ -19,15 +21,13 @@ public class FuncionarioController {
     private FuncionarioService funcionarioService;
 
     @GetMapping
-    public ResponseEntity<List<FuncionarioDTO>> getFuncionarios() {
-        return new ResponseEntity<List<FuncionarioDTO>>(this.funcionarioService.getFuncionarios(),
-                HttpStatus.OK);
+    public List<FuncionarioDTO> getFuncionarios() {
+        return this.funcionarioService.getFuncionarios();
     }
 
     @PostMapping
-    public ResponseEntity<FuncionarioDTO> cadastrarFuncionario(final @RequestBody FuncionarioEntity funcionario) {
-        return new ResponseEntity<FuncionarioDTO>(this.funcionarioService.cadastrarFuncionario(funcionario),
-                HttpStatus.CREATED);
+    public FuncionarioDTO cadastrarFuncionario(final @Valid @RequestBody FuncionarioEntity funcionario) {
+        return this.funcionarioService.cadastrarFuncionario(funcionario);
     }
 
 }

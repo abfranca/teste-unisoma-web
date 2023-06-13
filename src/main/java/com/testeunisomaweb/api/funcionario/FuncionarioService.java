@@ -21,6 +21,11 @@ public class FuncionarioService {
     }
 
     public FuncionarioDTO cadastrarFuncionario(FuncionarioEntity funcionario) {
+        if (funcionario.getCpf().length() < 14) {
+            String cpf = funcionario.getCpf();
+            funcionario.setCpf(cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-"
+                    + cpf.substring(9));
+        }
         return this.getFuncionarioDTO(this.funcionarioRepository.save(funcionario));
     }
 

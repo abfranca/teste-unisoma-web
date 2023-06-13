@@ -35,18 +35,18 @@ O método HTTP POST serve para cadastrar um novo funcionário e retornará o nom
 ```bash
 # Padrão de envio da requisição
 {
-    "nome": "String de tamanho entre 2 e 50 sem considerar espaços em branco",
-    "cpf": "ddd.ddd.ddd-dd",
+    "nome": "String de tamanho entre 2 e 50 caracteres",
+    "cpf": "String contendo um cpf válido",
     "nascimento": "yyyy-MM-dd",
     "telefone": "(dd) d dddd-dddd | (dd) dddd-dddd",
-    "endereco": "String de tamanho entre 5 e 50 sem considerar espaços em branco",
-    "salario": number
+    "endereco": "String de tamanho entre 5 e 50 caracteres",
+    "salario": number maior ou igual a 0.0
 }
 
 # Exemplo
 {
     "nome": "Ana Silva",
-    "cpf": "123.456.789-01",
+    "cpf": "708.100.850-03",
     "nascimento": "1990-01-01",
     "telefone": "(12) 9 3456-7890",
     "endereco": "Rua Bacaninha, 12",
@@ -56,7 +56,7 @@ O método HTTP POST serve para cadastrar um novo funcionário e retornará o nom
 # Exemplo de retorno
 {
     "nome": "Ana Silva",
-    "cpf": "123.456.789-01",
+    "cpf": "708.100.850-03",
     "salario": 9876.54
 }
 ```
@@ -70,12 +70,12 @@ O método HTTP POST serve para atualizar o salário de um funcionário e retorna
 ddd.ddd.ddd-dd
 
 # Exemplo
-123.456.789-01
+708.100.850-03
 
 # Exemplo de retorno
 {
     "Novo salario": "10271.60",
-    "CPF": "123.456.789-01",
+    "CPF": "708.100.850-03",
     "Reajuste ganho": "395.06",
     "Em percentual": "4 %"
 }
@@ -90,11 +90,11 @@ O método HTTP POST serve para calcular o imposto de renda de um funcionário e 
 ddd.ddd.ddd-dd
 
 # Exemplo
-123.456.789-01
+708.100.850-03
 
 # Exemplo de retorno
 {
-    "CPF": "123.456.789-01",
+    "CPF": "708.100.850-03",
     "Imposto": "R$ 2066.04"
 }
 ```
